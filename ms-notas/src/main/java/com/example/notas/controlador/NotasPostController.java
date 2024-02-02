@@ -25,7 +25,7 @@ public class NotasPostController {
 	public ResponseEntity<Notas> nuevaNota(@RequestBody Notas nota){
 		// Alumnos
 		try {
-		rest.getForEntity("http://localhost:8001/alumnos/{id}", Object.class, nota.getIdAlumno());
+		rest.getForEntity("http://servicio-alumnos/alumnos/{id}", Object.class, nota.getIdAlumno());
 		}catch (HttpClientErrorException ex) {
 			// TODO: handle exception
 			return ResponseEntity.notFound().build();
@@ -33,7 +33,7 @@ public class NotasPostController {
 		// System.out.println(nota);
 		// Modulos
 		try {
-		rest.getForEntity("http://localhost:8002/modulos/{id}", Object.class, nota.getIdModulo());
+		rest.getForEntity("http://servicio-modulos/modulos/{id}", Object.class, nota.getIdModulo());
 		}catch (HttpClientErrorException ex) {
 			// TODO: handle exception
 			return ResponseEntity.notFound().build();
