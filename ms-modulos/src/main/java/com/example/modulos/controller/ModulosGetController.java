@@ -21,6 +21,8 @@ public class ModulosGetController {
 	}
 	@GetMapping("/modulos/{id}")
 	public ResponseEntity<Modulo> getModuloById(@PathVariable Integer id){
-		return ResponseEntity.ok(servicio.getModuloById(id));
+		Modulo m = servicio.getModuloById(id);
+		if(m == null) return ResponseEntity.notFound().build();
+		return ResponseEntity.ok(m);
 	}
 }
