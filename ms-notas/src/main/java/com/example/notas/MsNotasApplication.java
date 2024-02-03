@@ -16,6 +16,7 @@ public class MsNotasApplication {
 	}
 	
 	@Bean
+	// Ribbon
 	@LoadBalanced
 	public RestTemplate getClient() {
 		return new RestTemplate();
