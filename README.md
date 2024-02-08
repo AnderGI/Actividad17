@@ -1,5 +1,12 @@
 # Spring boot microservices architecture template
 
+## How to use it
+Inside ./production there is a folder which contains the docker-compose.yml the init and dbdata folder. Inside that folder execute
+```
+docker-compose up
+```
+
+
 ## What is being used
 
     - Microservices
