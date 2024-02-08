@@ -9,7 +9,7 @@
     - Docker networks
     - Docker-compose
    
-> Docker compose template file
+> ## Docker compose template file
 ```
 version: "3.8"
 services:
