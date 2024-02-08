@@ -122,4 +122,4 @@ networks:
   alumnos:
 ```
 
-### Application.properties
+### Application.properties sample
