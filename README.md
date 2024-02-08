@@ -9,9 +9,10 @@
     - Docker networks
     - Docker-compose
    
-> ## Docker compose template file
-> [!IMPORTANT]
-> All services are downloaded at the same time
+## Docker compose template file
+
+[!IMPORTANT]
+All services are downloaded at the same time
 > [!IMPORTANT]
 > Every time the codebase of any microservice is changed a new image has to be built and pushed to
 > [!IMPORTANT]
