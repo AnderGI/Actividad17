@@ -1,33 +1,27 @@
-package com.example.notas.modelo;
+package org.zabalburu.notas.modelo;
 
-import jakarta.persistence.Column;
+
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
-import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
-import lombok.NoArgsConstructor;
 
-@Data
-@AllArgsConstructor
-@NoArgsConstructor
-@EqualsAndHashCode(onlyExplicitlyIncluded = true)
 @Entity
 @Table(name = "notas")
-public class Notas {
+@Data
+@EqualsAndHashCode(onlyExplicitlyIncluded = true)
+public class Nota {
 	@Id
-	@EqualsAndHashCode.Include
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@EqualsAndHashCode.Include
 	private Integer id;
-	@Column(name = "idAlumno")
+	
 	private Integer idAlumno;
-	@Column(name = "idModulo")
 	private Integer idModulo;
-	@Column(name = "evaluacion")
 	private Integer evaluacion;
-	@Column(name = "nota")
-	private Float nota;
+	private Double nota;
+
 }

@@ -1,24 +1,22 @@
-package com.example.notas;
+package org.zabalburu.notas;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 import org.springframework.cloud.client.loadbalancer.LoadBalanced;
 import org.springframework.context.annotation.Bean;
 import org.springframework.web.client.RestTemplate;
 
 @SpringBootApplication
-@EnableDiscoveryClient
-public class MsNotasApplication {
+public class NotasApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(MsNotasApplication.class, args);
+		SpringApplication.run(NotasApplication.class, args);
 	}
 	
+
 	@Bean
-	// Ribbon
 	@LoadBalanced
-	public RestTemplate getClient() {
+	public RestTemplate getTemplate() {
 		return new RestTemplate();
 	}
 
