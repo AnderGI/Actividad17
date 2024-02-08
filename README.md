@@ -121,5 +121,3 @@ services:
 networks:
   alumnos:
 ```
-
-### Application.properties sample
