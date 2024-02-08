@@ -12,8 +12,8 @@
 ## Docker compose template file
 
 ### Service download
-[!IMPORTANT]
-All services are downloaded at the same time
+> [!IMPORTANT]
+> All services are downloaded at the same time
 
 ### Image rebuilding
 [!IMPORTANT]
