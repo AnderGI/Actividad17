@@ -1,20 +1,16 @@
-<h1>This proyect will be used as a template for all Spring boot gateway api architectures</h1>
-<article>
-  <header>
-  <h2>What is being used : </h2>
-  </header>
-  <main>
-    <ul>
-      <li>Microservices</li>
-      <li>Eureka Server</li>
-      <li>Spring Cloud Gateway</li>
-      <li>Docker containers</li>
-      <li>Docker networks</li>
-      <li>Docker-compose</li>
-    </ul>
-  </main>
-</article>
-<code>
+# Spring boot microservices architecture template
+
+## What is being used
+
+    - Microservices
+    - Eureka Server
+    - Spring Cloud Gateway
+    - Docker containers
+    - Docker networks
+    - Docker-compose
+   
+> Docker compose template file
+```
 version: "3.8"
 services:
   eureka: 
@@ -97,4 +93,5 @@ services:
       - "alumnos"
 networks:
   alumnos:
-</code>
+  ```
+
