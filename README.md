@@ -12,17 +12,25 @@
 > ## Docker compose template file
 > [!IMPORTANT]
 > All services are downloaded at the same time
-
+> [!IMPORTANT]
+> Every time the codebase of any microservice is changed a new image has to be built and pushed to
+> [!IMPORTANT]
+> Container name should be equal to the one in application.properties
+> [!NOTE]
+> External port : Internal port (the one that is being used inside the docker network)
+> [!NOTE]
+> ## mysql image
+> Create passwd for root user, create sa user and create database (for that database sa user will be granted all permissions)
+> [!IMPORTANT]
+> Volumes will map our own folders and files inside ./compose with the ones inside the containers
+> Init will have executable sql scripts. They will be executed in order.
+```
 version: "3.8"
 services:
   eureka:
-    > [!IMPORTANT]
-    > Every time the codebase of any microservice is changed a new image has to be built and pushed to dockerhub
     image: andergi/eureka:latest
     container_name: eureka
     mem_limit: 700m
-    > [!NOTE]
-    > External port : Internal port (the one that is being used inside the docker network)
     ports:
       - "8761:8761"
     networks:
@@ -99,5 +107,5 @@ services:
       - "alumnos"
 networks:
   alumnos:
-
+```
 
