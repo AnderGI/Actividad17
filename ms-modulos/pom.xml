@@ -8,11 +8,11 @@
 		<version>3.2.2</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>com.example</groupId>
-	<artifactId>ms-modulos</artifactId>
+	<groupId>org.zabalburu</groupId>
+	<artifactId>Modulos</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>ms-modulos</name>
-	<description>Microservicios de Modulos</description>
+	<name>Modulos</name>
+	<description>Modulos</description>
 	<properties>
 		<java.version>17</java.version>
 		<spring-cloud.version>2023.0.0</spring-cloud.version>
@@ -32,9 +32,10 @@
 		</dependency>
 
 		<dependency>
-			<groupId>com.microsoft.sqlserver</groupId>
-			<artifactId>mssql-jdbc</artifactId>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-devtools</artifactId>
 			<scope>runtime</scope>
+			<optional>true</optional>
 		</dependency>
 		<dependency>
 			<groupId>com.mysql</groupId>

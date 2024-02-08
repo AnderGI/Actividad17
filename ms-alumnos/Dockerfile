@@ -1,4 +1,5 @@
-FROM openjdk:17
+FROM openjdk:23-slim-bullseye
 VOLUME /tmp
-ADD ./target/ms-alumnos-0.0.1-SNAPSHOT.jar alumnos-ms.jar
-ENTRYPOINT ["java","-jar","alumnos-ms.jar"]
+ADD ./target/Alumnos-0.0.1-SNAPSHOT.jar alumnos.jar
+ENTRYPOINT ["java","-jar","alumnos.jar"]
+#CMD java -jar productos-ms.jar
