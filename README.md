@@ -12,7 +12,7 @@
 > ## Docker compose template file
 > [!IMPORTANT]
 > All services are downloaded at the same time
-```
+
 version: "3.8"
 services:
   eureka:
@@ -99,5 +99,5 @@ services:
       - "alumnos"
 networks:
   alumnos:
-  ```
+
 
