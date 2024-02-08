@@ -10,13 +10,19 @@
     - Docker-compose
    
 > ## Docker compose template file
+> [!IMPORTANT]
+> All services are downloaded at the same time
 ```
 version: "3.8"
 services:
-  eureka: 
+  eureka:
+    > [!IMPORTANT]
+    > Every time the codebase of any microservice is changed a new image has to be built and pushed to dockerhub
     image: andergi/eureka:latest
     container_name: eureka
     mem_limit: 700m
+    > [!NOTE]
+    > External port : Internal port (the one that is being used inside the docker network)
     ports:
       - "8761:8761"
     networks:
