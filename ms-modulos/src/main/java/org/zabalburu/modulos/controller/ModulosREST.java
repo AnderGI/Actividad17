@@ -18,43 +18,43 @@ import org.zabalburu.modulos.modelo.Modulo;
 import org.zabalburu.modulos.service.ModulosService;
 
 @RestController
-@RequestMapping("modulos")
+@RequestMapping("/modulos")
 public class ModulosREST {
 	@Autowired
 	private ModulosService service;
-	
+
 	@GetMapping("")
-	public List<Modulo> getModulos(){
+	public List<Modulo> getModulos() {
 		return service.getModulos();
 	}
-	
+
 	@GetMapping("/{id}")
-	public ResponseEntity<Modulo> getModulo(@PathVariable Integer id){
+	public ResponseEntity<Modulo> getModulo(@PathVariable Integer id) {
 		Modulo a = service.getModulo(id);
 		if (a == null) {
 			return ResponseEntity.notFound().build();
 		}
 		return ResponseEntity.ok(a);
 	}
-	
+
 	@PostMapping
-	public ResponseEntity<Modulo> nuevoModulo(@RequestBody Modulo a) 
-			throws URISyntaxException{
+	public ResponseEntity<Modulo> nuevoModulo(@RequestBody Modulo a)
+			throws URISyntaxException {
 		a = service.nuevoModulo(a);
 		if (a == null) {
 			return ResponseEntity.unprocessableEntity().build();
 		}
-		return ResponseEntity.created(new URI("/modulos/"+a.getId())).body(a);
+		return ResponseEntity.created(new URI("/modulos/" + a.getId())).body(a);
 	}
-	
+
 	@DeleteMapping("/{id}")
-	public ResponseEntity<Modulo> eliminarModulo(@PathVariable Integer id){
+	public ResponseEntity<Modulo> eliminarModulo(@PathVariable Integer id) {
 		if (!service.eliminarModulo(id)) {
 			return ResponseEntity.notFound().build();
 		}
 		return ResponseEntity.ok().build();
 	}
-	
+
 	@PutMapping("/{id}")
 	public ResponseEntity<Modulo> modificarModulo(@PathVariable Integer id,
 			@RequestBody Modulo a) {
