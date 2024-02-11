@@ -128,3 +128,17 @@ services:
 networks:
   alumnos:
 ```
+
+### SQL Server application.properties configuration
+```
+spring.datasource.url=jdbc:sqlserver://localhost:1234;databaseName=music;trustServerCertificate=true
+spring.datasource.driverClassName=com.microsoft.sqlserver.jdbc.SQLServerDriver
+spring.datasource.username=sa
+spring.datasource.password=tiger
+spring.jpa.hibernate.ddl-auto=update
+spring.jpa.show-sql=true
+spring.jpa.properties.hibernate.format_sql=true
+spring.jpa.database-platform=org.hibernate.dialect.SQLServerDialect
+```
+
+### MySql application.properties configuration
