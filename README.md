@@ -142,3 +142,15 @@ spring.jpa.database-platform=org.hibernate.dialect.SQLServerDialect
 ```
 
 ### MySql application.properties configuration
+
+```
+
+spring.datasource.url=jdbc:mysql://mysql:3306/music
+spring.datasource.driverClassName=com.mysql.cj.jdbc.Driver
+spring.jpa.database-platform=org.hibernate.dialect.MySQLDialect
+spring.datasource.username=sa
+spring.datasource.password=tiger
+spring.jpa.hibernate.ddl-auto=none
+spring.jpa.show-sql=true
+spring.jpa.properties.hibernate.format_sql=true
+```
